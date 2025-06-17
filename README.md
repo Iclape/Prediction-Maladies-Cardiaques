@@ -1,27 +1,77 @@
-**Prédiction des Maladies Cardiaques avec Machine Learning**
+# ❤️ Prédiction des Maladies Cardiaques avec Machine Learning
 
-Dans ce projet, nous explorerons l'application des algorithmes d'apprentissage automatique pour prédire la présence de maladies cardiaques basée sur les attributs médicaux des patients. Nous suivrons une méthodologie structurée, commençant par la compréhension du problème et concluant par l'évaluation du modèle. Plongeons dans les détails :
+## 📌 Introduction
 
-**Introduction**
+Les maladies cardiovasculaires figurent parmi les principales causes de mortalité dans le monde. Ce projet vise à démontrer comment l’apprentissage automatique peut être utilisé pour prédire efficacement la présence de maladies cardiaques en se basant sur des données médicales.
 
-Les maladies cardiovasculaires demeurent une cause significative de mortalité dans le monde entier. La détection précoce et le diagnostic sont critiques pour un traitement et une prévention efficaces. L'apprentissage automatique offre une approche prometteuse pour prédire les maladies cardiaques en utilisant les données des patients.
+---
 
-**Données**
+## 🎯 Objectif
 
-Nous utiliserons le jeu de données Heart Disease UCI du dépôt d'apprentissage automatique UCI. Ce jeu de données contient diverses caractéristiques médicales comme l'âge, le sexe, les niveaux de cholestérol, et l'angine induite par l'exercice, ainsi qu'une variable cible indiquant la présence ou l'absence de maladie cardiaque.
+Développer un modèle de classification capable de prédire si un patient est susceptible de souffrir d'une maladie cardiaque, à partir de ses caractéristiques cliniques.
 
-**Énoncé du Problème**
+---
 
-Notre objectif est de développer un modèle d'apprentissage automatique qui détermine avec précision si un patient a une maladie cardiaque basée sur ses attributs médicaux.
+## 🗂️ Données
 
-**Approche**
+- **Source** : [UCI Heart Disease Dataset](https://archive.ics.uci.edu/ml/datasets/Heart+Disease)
+- **Description** : Le jeu de données contient des variables telles que :
+  - `age`, `sex`, `cp` (type de douleur thoracique), `trestbps`, `chol`, `fbs`, `restecg`, `thalach`, `exang`, `oldpeak`, `slope`, `ca`, `thal`, etc.
+  - **Variable cible** : `target` (0 = pas de maladie, 1 = maladie cardiaque détectée)
 
-1. **Préprocessing des Données :** Traiter les valeurs aberrantes et découvrir les corrélations ou motifs.
+---
 
-2. **Analyse Exploratoire des Données (AED) :** Analyser le jeu de données pour comprendre les distributions des caractéristiques.
+## 🔍 Méthodologie
 
-3. **Sélection de Modèle :** Expérimenter avec divers algorithmes de classification tels que la Régression Logistique, les K-Plus Proches Voisins, et la Forêt Aléatoire.
+### 1. Prétraitement des données
+- Nettoyage, gestion des valeurs manquantes
+- Détection et gestion des valeurs aberrantes
+- Normalisation des données
+- Encodage des variables catégorielles si nécessaire
 
-4. **Évaluation du Modèle :** Évaluer la performance de chaque modèle en utilisant des métriques comme la précision, la précision, le rappel, et le score F1.
+### 2. Analyse exploratoire (EDA)
+- Visualisation des distributions des variables
+- Analyse des corrélations
+- Étude des relations entre variables et cible
 
-5. **Validation AUC :** Évaluer la performance du modèle en utilisant la corbe du ROC.
+### 3. Modélisation
+- Algorithmes utilisés :
+  - Régression Logistique
+  - K-Nearest Neighbors (KNN)
+  - Forêt Aléatoire (Random Forest)
+- Validation croisée
+- Optimisation des hyperparamètres
+
+### 4. Évaluation
+- Métriques de performance :
+  - Précision
+  - Rappel
+  - F1-Score
+  - Matrice de confusion
+  - Courbe ROC & AUC
+
+---
+
+## 📈 Résultats
+
+Les différents modèles ont été comparés en fonction de leur performance globale. La Forêt Aléatoire s'est montrée la plus performante en termes de compromis entre précision et rappel.
+
+---
+
+## 🛠️ Stack Technique
+
+- Python 3.x
+- Jupyter Notebook
+- Bibliothèques :
+  - pandas, numpy
+  - matplotlib, seaborn
+  - scikit-learn
+
+---
+
+## 🚀 Exécution du projet
+
+1. Cloner le dépôt :
+```bash
+git clone https://github.com/<votre-utilisateur>/heart-disease-prediction.git
+cd heart-disease-prediction
